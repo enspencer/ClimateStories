@@ -7,10 +7,13 @@ gem 'rails', '4.0.0'
 gem 'pg'
 
 # User gmaps4rails to geocode and map locations
-gem 'gmaps4rails', ' ~>2.0.0'
+gem 'gmaps4rails', ' ~>1.5.6'
 
 # for user authentication
 gem 'devise'
+
+# Javascript helper for maps
+gem 'underscore-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
