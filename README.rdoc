@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Rails app that collects and maps stories on how climate change affects the environment- natural and human- on a local scale.
 
-Things you may want to cover:
+I used the gmaps4rails gem, with help from this [great tutorial](http://andyglassblog.wordpress.com/2012/07/06/google-maps-for-rails-with-gmaps4-rails-tutorial-on-how-to-post-and-filter-locations/)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Created for the General Assembly WDI Boston 2013 first project.
