@@ -3,7 +3,7 @@ class CreateStories < ActiveRecord::Migration
     create_table :stories do |t|
       t.string :name
       t.text :body
-      t.string :image_url
+      t.string :url
       t.boolean :gmaps
       t.float :latitude
       t.float :longitude
