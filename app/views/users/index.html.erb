@@ -1,7 +1,7 @@
 <% @users.each do |user| %>
-	<%= user.username %>
+	<div><%= user.username %>
 	<% user.stories.each do |story| %>
 	<%= story.name %>
-	<%= story.body %>
+	<%= story.body %></div>
 	<% end %>
 <% end %>
