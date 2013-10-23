@@ -24,7 +24,7 @@ end
 def create
 	@story= Story.new(story_params)
 	if current_user
-		@my_story = Story.new()
+		@my_story = current_user.stories.create(params[:story_params])
 	end
 	respond_to do |format|
 		if @story.save
