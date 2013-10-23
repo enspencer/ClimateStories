@@ -1,0 +1,7 @@
+<% @users.each do |user| %>
+	<%= user.username %>
+	<% user.stories.each do |story| %>
+	<%= story.name %>
+	<%= story.body %>
+	<% end %>
+<% end %>
