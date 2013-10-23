@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Gmaps4rails::Application.load_tasks
+Gmaps4rails2::Application.load_tasks

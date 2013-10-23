@@ -1,4 +1,4 @@
-Gmaps4rails::Application.routes.draw do
+Gmaps4rails2::Application.routes.draw do
   root :to => "home#index"
   devise_for :users
 

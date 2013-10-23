@@ -33,6 +33,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       t.timestamps
       t.string :username
+      t.float :latitude
+      t.float :longitude
     end
 
     add_index :users, :email,                :unique => true
