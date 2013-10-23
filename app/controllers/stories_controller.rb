@@ -23,6 +23,9 @@ end
 
 def create
 	@story= Story.new(story_params)
+	if current_user
+		@my_story = Story.new()
+	end
 	respond_to do |format|
 		if @story.save
 			format.html { redirect_to @story, notice: 'Story was successfully created.' }
@@ -61,7 +64,7 @@ def set_story
 end
 
 def story_params
-	params.require(:story).permit(:name, :body, :url, :town, :region, :country, :latitude, :longitude)
+	params.require(:story).permit(:name, :body, :url, :town, :region, :country, :latitude, :longitude, :user_id)
 end
 
 end
