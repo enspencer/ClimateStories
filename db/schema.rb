@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20131023123956) do
   create_table "stories", force: true do |t|
     t.string   "name"
     t.text     "body"
-    t.string   "image_url"
+    t.string   "url"
     t.boolean  "gmaps"
     t.float    "latitude"
     t.float    "longitude"

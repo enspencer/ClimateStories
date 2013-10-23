@@ -12,8 +12,8 @@
 
 <p>
   <strong>Url:</strong>
-  <%= link_to @story.name, @story.url %>
+  <img src="<%= @story.url %>" />
 </p>
 
 <%= link_to 'Edit', edit_story_path(@story) %> |
-<%= link_to 'Back', storys_path %>
+<%= link_to 'Back', stories_path %>
