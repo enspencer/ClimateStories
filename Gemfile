@@ -6,6 +6,10 @@ gem 'rails', '4.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+# User gmaps4rails to geocode and map locations
+
+gem 'gmaps4rails'
+
 # for user authentication
 gem 'devise'
 
