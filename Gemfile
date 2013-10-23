@@ -7,7 +7,7 @@ gem 'rails', '4.0.0'
 gem 'pg'
 
 # User gmaps4rails to geocode and map locations
-gem 'gmaps4rails'
+gem 'gmaps4rails', ' ~>2.0.0'
 
 # for user authentication
 gem 'devise'
