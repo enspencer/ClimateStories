@@ -10,10 +10,13 @@
   <%= @story.body %>
 </p>
 
-<p>
-  <strong>Url:</strong>
-  <img src="<%= @story.url %>" />
-</p>
+<p><img src="<%= @story.url %>" width=300px /></p>
 
 <%= link_to 'Edit', edit_story_path(@story) %> |
 <%= link_to 'Back', stories_path %>
+
+<div style='width: 800px;'>
+  <div id="map" style='width: 1100px; height: 400px;'></div>
+</div>
+
+<%= gmaps4rails(@json) %>
