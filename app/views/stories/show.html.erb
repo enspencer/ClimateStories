@@ -13,6 +13,7 @@
 <p><img src="<%= @story.url %>" width=300px /></p>
 
 <%= link_to 'Edit', edit_story_path(@story) %> |
+<%= link_to 'Destroy', @story, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', stories_path %>
 
 <div style='width: 800px;'>
