@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.username %>
+</p>
+
+<p>
+  <strong>Story:</strong>
+  <% @user.stories.each do |story| %>
+  	<%= story.body %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+
+<div style='width: 800px;'>
+  <div id="map" style='width: 1100px; height: 400px;'></div>
+</div>
+
+<%= gmaps4rails(@json) %>
