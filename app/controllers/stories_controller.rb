@@ -24,7 +24,7 @@ class StoriesController < ApplicationController
 def create
 	@story= Story.new(story_params)
 	if current_user
-		@story = current_user.stories.create(params[:story_params])
+		@story = current_user.stories.create(story_params)
 	end
 	respond_to do |format|
 		if @story.save

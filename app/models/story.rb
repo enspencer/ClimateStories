@@ -1,4 +1,6 @@
 class Story < ActiveRecord::Base
+	include Geocoder
+	
 	belongs_to :user
 	after_initialize :ip_to_address
 	acts_as_gmappable
