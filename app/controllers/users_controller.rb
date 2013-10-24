@@ -1,10 +1,6 @@
 class UsersController < ApplicationController
 	before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-	def index
-		@users = User.all
-	end
-
 	def show
 		@user.stories.each do |story|
 			@json = story.to_gmaps4rails do |story, marker|

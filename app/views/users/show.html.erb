@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Username:</strong>
-  <%= @user.username %>
+	<% if !@user.username.empty? %>
+  		<strong>Username:</strong>
+  		<%= @user.username %>
+  <% else %>
+  	<p>Anonymous</p>
+  <% end %>
 </p>
 
 <p>
   <strong>Stories:</strong>
   <% @user.stories.each do |story| %>
+  	<h4><%= story.name %></h4><br>
   	<%= story.body %>
   <% end %>
 </p>
