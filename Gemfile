@@ -9,6 +9,9 @@ gem 'pg'
 # User gmaps4rails to geocode and map locations
 gem 'gmaps4rails', ' ~>1.5.6'
 
+# For getting address from IP address
+gem 'geocoder'
+
 # for user authentication
 gem 'devise'
 
