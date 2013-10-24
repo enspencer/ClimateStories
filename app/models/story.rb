@@ -1,8 +1,24 @@
 class Story < ActiveRecord::Base
 	belongs_to :user
+	after_initialize :ip_to_address
 	acts_as_gmappable
 
 	def gmaps4rails_address
-  		"#{town}, #{region}, #{country}"
+  		"#{latitude}, #{longitude}"
+	end
+
+	def ip_to_address
+		request ||= nil #initializes request to nil if there isn't one
+		if request
+			result = request.location || "204.9.220.40"
+		else
+			result = "204.9.220.40"
+		end
+		address = Geocoder.search(result)
+		self.latitude = address.first.data["latitude"]
+		self.longitude = address.first.data["longitude"]
+		self.town = address.first.data["city"]
+		self.region = address.first.data["region_code"]
+		self.country = address.first.data["country_code"]
 	end
 end
