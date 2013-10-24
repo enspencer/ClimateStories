@@ -3,7 +3,7 @@
 <p>
   <strong>User:</strong>
   <% if @story.user %>
-  	<%= @story.user.username %>
+  	<%= link_to @story.user.username, @story.user %>
   <% else %>
   	Anonymous
   <% end %>
