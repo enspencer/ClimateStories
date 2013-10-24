@@ -6,12 +6,12 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@json = @user.stories.each do |story|
-			story.to_gmaps4rails do |story, marker|
-			marker.infowindow render_to_string(:partial => "/stories/infowindow", :locals => { :story => story})
+		@user.stories.each do |story|
+			@json = story.to_gmaps4rails do |story, marker|
+				marker.infowindow render_to_string(:partial => "/stories/infowindow", :locals => { :story => story})
+			end
 		end
 	end
-end
 
 
 	private
