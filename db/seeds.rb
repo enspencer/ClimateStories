@@ -6,4 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Story.create(name: 'Here in Winchester', body: 'The winters are much harsher and the summers are much hotter here.', country: 'United States', region: 'Massachusetts', town: 'Winchester', user_id: 1)
+Story.create(name: 'Here in Winchester', body: 'Everything is the worst', country: 'United States', region: 'Massachusetts', town: 'Winchester', user_id: 1)

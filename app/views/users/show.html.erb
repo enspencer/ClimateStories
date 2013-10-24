@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-	<% if !@user.username.empty? %>
   		<strong>Username:</strong>
+  		<% if @user != nil %>
   		<%= @user.username %>
-  <% else %>
-  	<p>Anonymous</p>
-  <% end %>
+  		<% else %>
+  			<p>Anonymous</p>
+  		<% end %>
 </p>
 
 <p>

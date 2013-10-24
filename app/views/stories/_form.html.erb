@@ -1,7 +1,7 @@
 <%= form_for(@story) do |f| %>
 <% if @story.errors.any? %>
 <div id="error_explanation">
-<h2><%= pluralize(@song.errors.count, "error") %> 	prohibited this story from being saved:</h2>
+<h2><%= pluralize(@story.errors.count, "error") %> 	prohibited this story from being saved:</h2>
 
 	<ul>
 		<% @story.errors.full_messages.each do |msg| %>
@@ -18,7 +18,7 @@
 
 <div class="field">
 	<% if current_user %>
-		<%= f.hidden_field :user_id, :value => current_user.id %>
+	<%= f.hidden_field :user_id, :value => current_user.id %>
 	<% end %>
 </div>
 

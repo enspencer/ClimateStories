@@ -1,5 +1,5 @@
 class StoriesController < ApplicationController
-	before_action :set_story, only: [:show, :edit, :update, :destroy]
+	before_action :set_story, only: [:show, :edit, :update, :destroy, :user_owns_story?]
 
 	def index
 		@stories = Story.all
@@ -14,12 +14,12 @@ class StoriesController < ApplicationController
 		end
 	end
 
-def new
-	@story = Story.new
-end
+	def new
+		@story = Story.new
+	end
 
-def edit
-end
+	def edit
+	end
 
 def create
 	@story= Story.new(story_params)

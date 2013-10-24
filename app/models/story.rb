@@ -19,4 +19,8 @@ class Story < ActiveRecord::Base
 	# 	 }
 	# end
 
+	def user_owns_story?
+		story.user == current_user
+	end
+
 end
