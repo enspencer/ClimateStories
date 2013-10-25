@@ -1,12 +1,12 @@
-<ul class="navbar">
-  <li class="active"><a href="/">Home</a></li>
-  <li class="active"><%= link_to 'Add Your Story', new_story_path %></li>
-<% if user_signed_in? %>
-  <li class="active"><%= link_to "Log Out", destroy_user_session_path, method: 'delete' %></li>
-  <li class="active"><%= link_to "Edit User", edit_user_registration_path %></li>
-   <li class="active"><%= current_user.email %></li>
-<% else %>
-  <li class="active"><%= link_to "Sign Up", new_user_registration_path %></li>
-  <li class="active"><%= link_to "Sign In", new_user_session_path %></li>
-<% end %>
+<ul class="btn btn-navbar navbar" data-toggle="collapse" data-target=".nav-collapse">
+	<li class="active icon-bar"><a href="/">Home</a></li>
+	<li class="active icon-bar"><%= link_to 'Add Your Story', new_story_path %></li>
+	<% if user_signed_in? %>
+	<li class="active icon-bar"><%= link_to "Log Out", destroy_user_session_path, method: 'delete' %></li>
+	<li class="active icon-bar"><%= link_to "Edit User", edit_user_registration_path %></li>
+	<li class="active icon-bar"><%= current_user.email %></li>
+	<% else %>
+	<li class="active icon-bar"><%= link_to "Sign Up", new_user_registration_path %></li>
+	<li class="active icon-bar"><%= link_to "Sign In", new_user_session_path %></li>
+	<% end %>
 </ul>
