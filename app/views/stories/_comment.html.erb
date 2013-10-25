@@ -1,0 +1,7 @@
+<div class="comment">
+  <i><%= @comment.name %> says:</i><br />
+  <%= @comment.body %>
+  <%= link_to 'Destroy Comment', comment,
+    :confirm => 'Are you sure?',
+    :method => :delete if signed_in? %>
+</div>

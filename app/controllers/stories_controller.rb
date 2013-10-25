@@ -12,6 +12,7 @@ class StoriesController < ApplicationController
 		@json = @story.to_gmaps4rails do |story, marker|
 			marker.infowindow render_to_string(:partial => "/stories/infowindow", :locals => { :story => story})
 		end
+		@comment = Comment.new( :story => @story )
 	end
 
 	def new

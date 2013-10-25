@@ -1,3 +1,4 @@
+<div class="story">
 <div class="story-container">
 <p id="notice"><%= notice %></p>
 
@@ -23,8 +24,9 @@
 
 
 <div class="story-map" style='width: 800px;'>
-  <div id="map" style='width: 700px; height: 300px;'></div>
+  <div id="map" style='width: 700px; height: 300px;'></div></div>
 </div>
+
 
 <%= gmaps4rails(@json) %>
 
@@ -36,4 +38,11 @@
 <% else %>
   <%= link_to 'Back', stories_path %>
 <% end %>
+</div>
+</div>
+
+<div class="comments"><h2>Add Comment</h2>
+<%= render 'comment_form' %>
+
+<%= render 'comment' %>
 </div>
