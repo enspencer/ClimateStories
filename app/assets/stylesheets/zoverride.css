@@ -29,9 +29,17 @@ ul {
 }
 
 .links {
+	margin-top: 20px;
 	clear: both;
+	float: right;
 }
 
 h1 {
 	padding-left: 20px;
+}
+
+.index-story {
+	float: left;
+	padding-left: 10%;
+	margin-bottom: 30px;
 }

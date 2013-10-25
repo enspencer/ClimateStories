@@ -6,12 +6,11 @@
 
 <%= gmaps4rails(@json) %>
 
-<h2>Recently added stories:</h2>
+<h3>Recently added stories:</h3>
+<div class="links"><h3><%= link_to 'Add Your Story', new_story_path %></h3></div>
 <% @stories.each do |story| %>
-<div>
-	<%= link_to story.name, story %>
-	<%= story.body %>
+<div class="index-story">
+	<h4><%= link_to story.name, story %></h4>
+	<h6><%= story.body %></h6>
 </div>
 <% end %>
-
-<div><%= link_to 'Add Your Story', new_story_path %></div>
