@@ -6,6 +6,9 @@ gem 'rails', '4.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+# PRY ALL THE TIME!
+gem 'pry-rails'
+
 # User gmaps4rails to geocode and map locations
 gem 'gmaps4rails', ' ~>1.5.6'
 

@@ -2,7 +2,7 @@
 <% @story.comments.each do |comment| %>
   <i><%= comment.name %> says:</i><br />
   <%= comment.body %>
-  <%= link_to 'Destroy Comment', comment,
+  <%= link_to 'Destroy Comment', story_comment_path(story_id: @story, comment_id: comment),
     :confirm => 'Are you sure?',
     :method => :delete if signed_in? %>
     <% end %>
