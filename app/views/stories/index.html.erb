@@ -1,10 +1,10 @@
 <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 <div class="map">
-<div style='width: 800px;'>
+<div>
 	<div id="map" style='width: 1100px; height: 450px;'></div>
 </div>
 
-<%= gmaps4rails(@json) %>
+<%#= gmaps4rails(@json) %>
 </div>
 
 <h3>All stories:</h3>
@@ -14,3 +14,6 @@
 	<h6><%= story.body %></h6>
 </div>
 <% end %>
+
+<%= gmaps("markers" => {"data" => @json},
+                "map_options" => {"type" => "TERRAIN", :raw => '{mapTypeControlOptions: {mapTypeIds: ["watercolor", google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.TERRAIN], style: google.maps.MapTypeControlStyle.DROPDOWN_MENU}}'}) %>

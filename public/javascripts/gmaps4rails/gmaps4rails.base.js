@@ -1,19 +1,3 @@
-// ({
-//   createStamenMap: function() {
-//     var StamenMapTypeOptions;
-//     StamenMapTypeOptions = new google.maps.ImageMapType({
-//       getTileUrl: function(coord, zoom) {
-//         return "http://tile.stamen.com/toner/" + zoom + "/" + coord.x + "/" + coord.y + ".png";
-//       },
-//       tileSize: new google.maps.Size(256, 256),
-//       name: "toner",
-//       maxZoom: 18
-//     });
-//     this.serviceObject.mapTypes.set("toner", StamenMapTypeOptions);
-//     return this.serviceObject.setMapTypeId("toner");
-//   }
-// });
-
 
 (function() {
   var Gmaps;
@@ -41,6 +25,20 @@
   };
 
   window.Gmaps = Gmaps;
+
+  this.CreateStamenMap = function() {
+    var StamenMapTypeOptions;
+    return StamenMapTypeOptions = new google.maps.ImageMapType({
+      getTileUrl: function(coord, zoom) {
+        return "http://tile.stamen.com/watercolor/" + zoom + "/" + coord.x + "/" + coord.y + ".png";
+      },
+      tileSize: new google.maps.Size(256, 256),
+      name: "WATERCOLOR",
+      maxZoom: 18
+    });
+    this.serviceObject.mapTypes.set("WATERCOLOR", StamenMapTypeOptions);
+    return this.serviceObject.setMapTypeId("WATERCOLOR");
+  };
 
   this.Gmaps4Rails = (function() {
 

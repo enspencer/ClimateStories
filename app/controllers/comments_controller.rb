@@ -14,8 +14,7 @@ class CommentsController < ApplicationController
 
 	def destroy
 		@comment = Comment.find(params[:comment_id])
-		binding.pry
-		@story = @comment.story
+		@story = Story.find(@comment.story_id)
 		@comment.destroy
 
 		redirect_to(@story)

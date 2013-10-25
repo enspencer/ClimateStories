@@ -1,12 +1,15 @@
 ClimateStories::Application.routes.draw do
   root :to => "home#index"
+    get 'about' => 'home#about'
+
   devise_for :users
   resources :stories do
      resources :comments
   end
 
   resources :users
- 
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
