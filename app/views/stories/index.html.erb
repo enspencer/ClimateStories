@@ -1,15 +1,15 @@
-	<p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-
+<p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+<div class="map">
 <div style='width: 800px;'>
-  <div id="map" style='width: 1100px; height: 400px;'></div>
+	<div id="map" style='width: 1100px; height: 450px;'></div>
 </div>
 
 <%= gmaps4rails(@json) %>
+</div>
 
-<h3>Recently added stories:</h3>
-<div class="links"><h3><%= link_to 'Add Your Story', new_story_path %></h3></div>
-<% @stories.each do |story| %>
-<div class="index-story">
+<h3>All stories:</h3>
+	<% @stories.each do |story| %>
+	<div class="index-story">
 	<h4><%= link_to story.name, story %></h4>
 	<h6><%= story.body %></h6>
 </div>

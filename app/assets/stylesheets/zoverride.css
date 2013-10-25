@@ -1,5 +1,6 @@
 body {
-font-family: 'Karla', sans-serif;
+	font-family: 'Karla', sans-serif;
+	background-color: #DBEEFF;
 }
 
 ul {
@@ -10,40 +11,63 @@ ul {
 	margin-top: -100px;
 }
 
+#home-background {
+	background: url('https://s3.amazonaws.com/images.m2i.stamen.com/20131025/watercolor_C3r6W_D-btA.jpeg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 .active {
- 	display: inline;
- 	margin-right: 20px;
- }
+	display: inline;
+	margin-right: 20px;
+}
 
 .welcome-header {
- 	text-align: center;
- 	font-size: 50px;
- 	margin-top: 20%;
- }
+	text-align: center;
+	font-size: 50px;
+	margin-top: 20%;
+}
 
 .welcome-button {
 	padding: 16.5px 31px;
 	text-decoration: none;
 	-webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  font-size: 19;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	font-size: 40;
 	box-shadow: none;
 	text-shadow: none;
+	border: none;
 }
 
 .welcome-button:hover {
-   border-top-color: #35a16b;
-   background: #35a16b;
-   }
+	border-top-color: #35a16b;
+	background: #35a16b;
+	text-decoration: none;
+}
 .welcome-button:active {
-   border-top-color: #1e6643;
-   background: #1e6643;
-   }
+	border-top-color: #1e6643;
+	background: #1e6643;
+}
 
 #welcome-button {
-		text-align: center;
+	text-align: center;
+	font-size: 40;
+	text-decoration: none;
 }
+
+@media (max-width: 500px) {
+	h1 {
+		font-size: 36px;
+	}
+	li {
+		display: block;
+		padding: 5px;
+	}
+}
+
 
 .story-map {
 	float: right;
