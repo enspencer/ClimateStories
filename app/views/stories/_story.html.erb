@@ -1,0 +1,44 @@
+<div class="story">
+<div class="story-container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <% if @story.user %>
+  	<%= link_to @story.user.username, @story.user %>
+  <% else %>
+  	Anonymous
+  <% end %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @story.name %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @story.body %>
+</p>
+</div>
+
+
+<div class="story-map" style='width: 800px;'>
+  <div id="map" style='width: 700px; height: 300px;'></div></div>
+</div>
+
+
+<%= gmaps4rails(@json) %>
+
+<div class="links">
+<% if user_signed_in? && current_user == @story.user %>
+  <%= link_to 'Edit', edit_story_path(@story) %> |
+  <%= link_to 'Destroy', @story, method: :delete, data: { confirm: 'Are you sure?' } %> |
+  <%= link_to 'Back', stories_path %>
+<% else %>
+  <%= link_to 'Back', stories_path %>
+<% end %>
+</div>
+</div>
+
+
