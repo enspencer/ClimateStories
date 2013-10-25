@@ -30,13 +30,11 @@ ul {
   font-size: 19;
 	box-shadow: none;
 	text-shadow: none;
-	color: white;
 }
 
 .welcome-button:hover {
    border-top-color: #35a16b;
    background: #35a16b;
-   color: #white;
    }
 .welcome-button:active {
    border-top-color: #1e6643;
@@ -58,7 +56,7 @@ ul {
 .links {
 	margin-top: 20px;
 	clear: both;
-	float: right;
+	float: left;
 }
 
 h1 {
@@ -71,7 +69,9 @@ h1 {
 	margin-bottom: 30px;
 }
 
-#comments {
+.comments {
+	margin-top: 30px;
+	margin-left: 200px;
 }
 
 .story-form {
