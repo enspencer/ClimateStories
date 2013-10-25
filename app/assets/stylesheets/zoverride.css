@@ -1,0 +1,13 @@
+body {
+font-family: 'Karla', sans-serif;
+}
+
+
+ul {
+	text-align: right;
+}
+
+ .active {
+ 	display: inline;
+ 	margin-right: 20px;
+ }

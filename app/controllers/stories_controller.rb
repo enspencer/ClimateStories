@@ -2,7 +2,7 @@ class StoriesController < ApplicationController
 	before_action :set_story, only: [:show, :edit, :update, :destroy, :user_owns_story?]
 
 	def index
-		@stories = Story.all
+		@stories = Story.order("created_at DESC").all
 		@json = @stories.to_gmaps4rails do |story, marker|
 			marker.infowindow render_to_string(:partial => "/stories/infowindow", :locals => { :story => story})
 		end

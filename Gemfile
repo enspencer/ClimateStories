@@ -27,8 +27,15 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
+# Use Twitter Bootstrap for styling
+# maybe put this in an assets group
+gem 'twitter-bootstrap-rails'
+
+# Use Less for Twitter Bootstrap gem
+gem 'less-rails'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

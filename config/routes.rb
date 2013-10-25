@@ -1,5 +1,5 @@
 ClimateStories::Application.routes.draw do
-  root :to => "stories#index"
+  root :to => "home#index"
   devise_for :users
   resources :stories
   resources :users

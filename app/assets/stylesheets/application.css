@@ -10,13 +10,6 @@
  *
  *= require_self
  *= require_tree .
+ *= require_testbootstrap
+*= require_zoverride.css
  */
-
-ul {
-	text-align: right;
-}
-
- .active {
- 	display: inline;
- 	margin-right: 20px;
- }

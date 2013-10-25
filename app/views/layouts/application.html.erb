@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Climate Stories</title>
+  <title>Rethinking Home</title>
+  <link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<h1><%= link_to 'Rethinking Home', root_path %></h1>
    <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
-
+<div class="container">
 <%= render 'layouts/navbar' %>
+	<p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
 <%= yield %>
 <%= yield :scripts %>
+</div>
 </body>
 </html>
