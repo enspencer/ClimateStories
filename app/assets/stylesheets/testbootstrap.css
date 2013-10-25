@@ -266,7 +266,7 @@ table {
     page-break-after: avoid;
   }
   .navbar {
-    display: none;
+    display: inline;
   }
   .table td,
   .table th {

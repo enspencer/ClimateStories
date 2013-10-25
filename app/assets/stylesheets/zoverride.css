@@ -6,6 +6,10 @@ ul {
 	text-align: right;
 }
 
+.navbar {
+	margin-top: -100px;
+}
+
 .active {
  	display: inline;
  	margin-right: 20px;
@@ -13,11 +17,34 @@ ul {
 
 .welcome-header {
  	text-align: center;
- 	margin-top: 25%;
+ 	font-size: 50px;
+ 	margin-top: 20%;
  }
 
+.welcome-button {
+	padding: 16.5px 31px;
+	text-decoration: none;
+	-webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  font-size: 19;
+	box-shadow: none;
+	text-shadow: none;
+	color: white;
+}
+
+.welcome-button:hover {
+   border-top-color: #35a16b;
+   background: #35a16b;
+   color: #white;
+   }
+.welcome-button:active {
+   border-top-color: #1e6643;
+   background: #1e6643;
+   }
+
 #welcome-button {
-	text-align: center;
+		text-align: center;
 }
 
 .story-map {
