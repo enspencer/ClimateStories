@@ -2,12 +2,36 @@ body {
 font-family: 'Karla', sans-serif;
 }
 
-
 ul {
 	text-align: right;
 }
 
- .active {
+.active {
  	display: inline;
  	margin-right: 20px;
  }
+
+.welcome-header {
+ 	text-align: center;
+ 	margin-top: 25%;
+ }
+
+#welcome-button {
+	text-align: center;
+}
+
+.story-map {
+	float: right;
+}
+
+.story-container {
+	float:left;
+}
+
+.links {
+	clear: both;
+}
+
+h1 {
+	padding-left: 20px;
+}
