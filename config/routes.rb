@@ -9,7 +9,7 @@ ClimateStories::Application.routes.draw do
 
   resources :users
 
-  match 'twilio/process_sms' => 'twilio#process_sms'
+  get 'twilio/process_sms' => 'user#process_sms'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', :group => :production
 
 # PRY ALL THE TIME! Use pry to not hate yourself
 gem 'pry-rails'
