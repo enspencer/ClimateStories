@@ -15,7 +15,7 @@ class Story < ActiveRecord::Base
 		if request
 			result = request.location || "204.9.220.40"
 		else
-			result = "204.9.220.40"
+			result = self.zipcode
 		end
 		address = Geocoder.search(result)
 		self.latitude = address.first.data["latitude"]
