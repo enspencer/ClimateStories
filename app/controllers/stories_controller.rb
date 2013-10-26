@@ -1,19 +1,6 @@
 class StoriesController < ApplicationController
 	before_action :set_story, only: [:show, :edit, :update, :destroy, :user_owns_story?]
-
-	 #  def process_sms
-	 #  	@story = Story.create
-	 #    story.town = params[:FromCity].capitalize
-	 #    story.region = params[:FromState]
-	 #    story.country = params[:FromCountry]
-	 #    @zipcode = params[:FromZip]
-	 #    story.body = params[:Body]
-	 #    story.name = params[:From]
-
-  #   render 'process_sms.xml.erb', :content_type => 'text/xml'
-  # end
-
-
+	
 	def index
 		@stories = Story.order("created_at DESC").all
 		@json = @stories.to_gmaps4rails do |story, marker|
@@ -78,7 +65,7 @@ def set_story
 end
 
 def story_params
-	params.require(:story).permit(:name, :body, :url, :town, :region, :country, :latitude, :longitude, :user_id)
+	params.require(:story).permit(:name, :body, :url, :town, :region, :country, :latitude, :longitude, :user_id, :zipcode)
 end
 
 end

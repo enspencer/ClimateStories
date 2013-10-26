@@ -4,7 +4,7 @@ class TwilioController < ApplicationController
     zipcode = params["FromZip"]
    	body = params["Body"]
     name = params["From"]
-    Story.create(zipcode: params["FromZip"], body: params["Body"], name: params["Name"])
+    Story.create(zipcode: params["FromZip"], body: params["Body"])
     return '200'
   	#render 'process_sms.xml.erb', content_type: 'text/xml'
 	end
