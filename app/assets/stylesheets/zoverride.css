@@ -87,6 +87,7 @@ h1 {
 	float: left;
 	padding-left: 10%;
 	margin-bottom: 30px;
+	padding-bottom: 50px;
 }
 
 .comments {
@@ -96,4 +97,14 @@ h1 {
 
 .story-form {
 	text-align: center;
+}
+
+.footer {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+}
+
+#map {
+	 margin: 0 auto 0 -30px;
 }

@@ -12,7 +12,7 @@
     </p>
 
     <p>
-      <strong>Name:</strong>
+      <strong>Title:</strong>
       <%= @story.name %>
     </p>
 
@@ -20,17 +20,8 @@
       <strong>Body:</strong>
       <%= @story.body %>
     </p>
-  </div>
 
-
-  <div class="story-map" style='width: 800px;'>
-    <div id="map" style='width: 700px; height: 300px;'></div></div>
-  </div>
-
-
-  <%= gmaps4rails(@json) %>
-
-  <div class="links">
+      <div class="links">
     <% if user_signed_in? && current_user == @story.user %>
     <%= link_to 'Edit', edit_story_path(@story) %> |
     <%= link_to 'Destroy', @story, method: :delete, data: { confirm: 'Are you sure?' } %> |
@@ -39,6 +30,17 @@
     <%= link_to 'Back', stories_path %>
     <% end %>
   </div>
+  </div>
+
+
+    <div id="map" class="story-map" style='width: 600px; height: 400px;'></div>
+  </div>
+
+  <%#= gmaps4rails(@json) %>
+
+  <%= gmaps("markers" => {"data" => @json},
+                "map_options" => {"type" => "TERRAIN", :raw => '{mapTypeControlOptions: {mapTypeIds: ["watercolor", google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.TERRAIN], style: google.maps.MapTypeControlStyle.DROPDOWN_MENU}}'}) %>
+
 </div>
 
 <div class="comments">

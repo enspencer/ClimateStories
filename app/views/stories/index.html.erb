@@ -1,10 +1,8 @@
-<p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p class="lead">What are the effects of climate change on your home? <a href="/stories/new">Add your story</a> to the map and share it with the world.</p>
 <div class="map">
-<div>
-	<div id="map" style='width: 1100px; height: 450px;'></div>
-</div>
 
-<%#= gmaps4rails(@json) %>
+	<div id="map" style='width: 1200px; height: 525px;'></div>
+
 </div>
 
 <h3>All stories:</h3>
@@ -17,3 +15,5 @@
 
 <%= gmaps("markers" => {"data" => @json},
                 "map_options" => {"type" => "TERRAIN", :raw => '{mapTypeControlOptions: {mapTypeIds: ["watercolor", google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.TERRAIN], style: google.maps.MapTypeControlStyle.DROPDOWN_MENU}}'}) %>
+
+                </div>
