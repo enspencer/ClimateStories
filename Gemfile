@@ -6,8 +6,13 @@ gem 'rails', '4.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
-# PRY ALL THE TIME!
+# PRY ALL THE TIME! Use pry to not hate yourself
 gem 'pry-rails'
+
+# Testing twilio to receive SMS
+gem 'twilio-ruby'
+
+gem 'dotenv-rails', :groups => [:development, :test]
 
 # User gmaps4rails to geocode and map locations
 gem 'gmaps4rails', ' ~>1.5.6'
