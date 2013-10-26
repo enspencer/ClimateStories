@@ -8,7 +8,6 @@ class TwilioController < ApplicationController
     @body = params[:Body]
     @sender = params[:From]
 
-    
     render 'process_sms.xml.erb', :content_type => 'text/xml'
   end
 
