@@ -13,9 +13,13 @@ class Story < ActiveRecord::Base
 	def ip_to_address
 		request ||= nil #initializes request to nil if there isn't one
 		if request
-			result = request.location || "204.9.220.40"
+			if request.location
+				result = request.location || "204.9.220.40"
+			else
+				result = self.zipcode
+			end
 		else
-			result = self.zipcode
+			result = "204.9.220.40"
 		end
 		address = Geocoder.search(result)
 		self.latitude = address.first.data["latitude"]
