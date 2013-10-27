@@ -21,25 +21,25 @@
       <%= @story.body %>
     </p>
 
-      <div class="links">
-    <% if user_signed_in? && current_user == @story.user %>
-    <%= link_to 'Edit', edit_story_path(@story) %> |
-    <%= link_to 'Destroy', @story, method: :delete, data: { confirm: 'Are you sure?' } %> |
-    <%= link_to 'Back', stories_path %>
-    <% else %>
-    <%= link_to 'Back', stories_path %>
-    <% end %>
-  </div>
-  </div>
-
-
-    <div id="map" class="story-map" style='width: 600px; height: 400px;'></div>
+    <div class="links">
+      <% if user_signed_in? && current_user == @story.user %>
+      <%= link_to 'Edit', edit_story_path(@story) %> |
+      <%= link_to 'Destroy', @story, method: :delete, data: { confirm: 'Are you sure?' } %> |
+      <%= link_to 'Back', stories_path %>
+      <% else %>
+      <%= link_to 'Back', stories_path %>
+      <% end %>
+    </div>
   </div>
 
-  <%#= gmaps4rails(@json) %>
 
-  <%= gmaps("markers" => {"data" => @json},
-                "map_options" => {"type" => "TERRAIN", :raw => '{mapTypeControlOptions: {mapTypeIds: ["terrain",google.maps.MapTypeId.TERRAIN], style: google.maps.MapTypeControlStyle.DROPDOWN_MENU}}'}) %>
+  <div id="map" class="story-map" style='width: 600px; height: 400px;'></div>
+</div>
+
+<%#= gmaps4rails(@json) %>
+
+<%= gmaps("markers" => {"data" => @json},
+"map_options" => {"type" => "TERRAIN", :raw => '{mapTypeControlOptions: {mapTypeIds: ["terrain",google.maps.MapTypeId.TERRAIN], style: google.maps.MapTypeControlStyle.DROPDOWN_MENU}}'}) %>
 
 </div>
 
@@ -49,10 +49,15 @@
 
   <h4>Add Comment</h4>
   <%= form_for([@story, @story.comments.build]) do |f| %>
+    <% if current_user %>
+    <%= f.label :name %>
+      <%= f.hidden_field :name, :value => current_user.username %>
+    <% else %>
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
   </div>
+  <% end %>
 
   <div class="field">
     <%= f.label :body %><br />

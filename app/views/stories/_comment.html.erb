@@ -1,6 +1,6 @@
 <div class="comment">
 <% @story.comments.each do |comment| %>
-  <i><%= comment.name %> says:</i><br />
+  <i><%= comment.name || 'Anonymous' %> says:</i><br />
   <%= comment.body %>
   <%= link_to 'Destroy Comment', story_comment_path(story_id: @story, comment_id: comment),
     :confirm => 'Are you sure?',

@@ -1,4 +1,4 @@
-<p class="lead">What are the effects of climate change on your home? <a href="/stories/new">Add your story</a> to the map and share it with the world.</p>
+<p class="lead">What are the effects of climate change on your home? <a href="/stories/new">Add your story</a> to the map and share it with the world, or text +1 781-836-5029 to submit via SMS.</p>
 <div class="map">
 
 	<div id="map" style='width: 1200px; height: 525px;'></div>
@@ -11,7 +11,7 @@
 	<% if story.name %>
 		<h4><%= link_to story.name, story %></h4>
 	<% else %>
-		<h4><%= link_to story.town, story %></h4>
+		<h4><%= link_to story.town story.region, story %></h4>
 	<% end %>
 	<h6><%= story.body %></h6>
 </div>
