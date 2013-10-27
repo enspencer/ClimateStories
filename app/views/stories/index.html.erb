@@ -8,11 +8,11 @@
 <h3>All stories:</h3>
 	<% @stories.each do |story| %>
 	<div class="index-story">
-	<%# if story.name %>
+	<% if story.name %>
 		<h4><%= link_to story.name, story %></h4>
-	<%# else %>
-		<%#= link_to story.city, story %>
-	<%# end %>
+	<% else %>
+		<%= link_to story.town, story %>
+	<% end %>
 	<h6><%= story.body %></h6>
 </div>
 <% end %>
