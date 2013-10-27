@@ -1,6 +1,7 @@
 body {
 	font-family: 'Karla', sans-serif;
 	background-color: #DBEEFF;
+	background:linear-gradient(to bottom, #DBEEFF,#ffffff);
 }
 
 ul {
