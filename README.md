@@ -3,8 +3,10 @@ README
 
 An app that collects and maps stories on how climate change affects the natural and human environment on a local scale.
 
-I used the gmaps4rails gem, with help from this [great tutorial](http://andyglassblog.wordpress.com/2012/07/06/google-maps-for-rails-with-gmaps4-rails-tutorial-on-how-to-post-and-filter-locations/).
+I used the [gmaps4rails](https://github.com/apneadiving/Google-Maps-for-Rails) gem, with help from this [great tutorial](http://andyglassblog.wordpress.com/2012/07/06/google-maps-for-rails-with-gmaps4-rails-tutorial-on-how-to-post-and-filter-locations/), and the [Geocoder](https://github.com/alexreisner/geocoder) gem for locating by IP address.
 
-Created for the <a href="https://generalassemb.ly/">General Assembly</a> <a href="https://generalassemb.ly/education/web-development-immersive/boston">WDI Boston 2013</a> first project.
+It also uses the [twilio-ruby](https://github.com/twilio/twilio-ruby) gem to allow texting stories to the app. [This demo](https://github.com/crabasa/twilio-rails-demo) helped me set that up.
 
-Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.
+Created for the [General Assembly](https://generalassemb.ly/) [WDI Boston 2013](https://generalassemb.ly/education/web-development-immersive/boston) first project.
+
+Map tiles by [Stamen Design](http://stamen.com), under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.
