@@ -19,7 +19,7 @@ class Story < ActiveRecord::Base
 				result = self.town
 			end
 		else
-			result = "204.9.220.40"
+			result = self.town
 		end
 		address = Geocoder.search(result)
 		self.latitude = address.first.data["latitude"]
