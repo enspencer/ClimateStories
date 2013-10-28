@@ -19,9 +19,10 @@ class Story < ActiveRecord::Base
 				result = self.zipcode
 			end
 		else
-			result = self.zipcode
+			# by default texts are passing to this
+			result = "204.9.220.60"
 		end
-		address = Geocoder.search("result")
+		address = Geocoder.search(result)
 		self.latitude = address.first.data["latitude"]
 		self.longitude = address.first.data["longitude"]
 		self.town = address.first.data["city"]
