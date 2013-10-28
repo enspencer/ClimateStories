@@ -14,7 +14,7 @@ class Story < ActiveRecord::Base
 		request ||= nil #initializes request to nil if there isn't one
 		if request
 			if request.location
-				result = request.location || "204.9.220.40"
+				result = request.location || self.zipcode
 			else
 				result = self.zipcode
 			end
