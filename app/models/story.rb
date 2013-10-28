@@ -14,13 +14,13 @@ class Story < ActiveRecord::Base
 		request ||= nil #initializes request to nil if there isn't one
 		if request
 			if request.location
-				result = self.zipcode
+				result = request.location || "204.9.220.40"
 			else
-				result = request.location
+				result = self.zipcode
 			end
 		else
 			# by default texts are passing to this
-			result = self.zipcode
+			result = "204.9.220.60"
 		end
 		address = Geocoder.search(result)
 		self.latitude = address.first.data["latitude"]
