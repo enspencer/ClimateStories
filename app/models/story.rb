@@ -7,7 +7,7 @@ class Story < ActiveRecord::Base
 	acts_as_gmappable
 
 	def gmaps4rails_address
-  		"#{latitude}, #{longitude}"
+  		"#{latitude}, #{longitude}" || self.zipcode
 	end
 
 	def ip_to_address
