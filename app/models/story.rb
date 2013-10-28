@@ -16,7 +16,7 @@ class Story < ActiveRecord::Base
 			if request.location
 				result = request.location || "204.9.220.40"
 			else
-				result = self.zipcode
+				result = self.town
 			end
 		else
 			result = "204.9.220.40"
