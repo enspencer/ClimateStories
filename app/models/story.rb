@@ -14,9 +14,9 @@ class Story < ActiveRecord::Base
 		request ||= nil #initializes request to nil if there isn't one
 		if request
 			if request.location
-				result = request.location || self.zipcode
-			else
 				result = self.zipcode
+			else
+				result = request.location
 			end
 		else
 			# by default texts are passing to this
