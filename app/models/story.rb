@@ -20,7 +20,7 @@ class Story < ActiveRecord::Base
 			end
 		else
 			# by default texts are passing to this
-			result = "204.9.220.60"
+			result = self.zipcode
 		end
 		address = Geocoder.search(result)
 		self.latitude = address.first.data["latitude"]
