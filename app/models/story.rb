@@ -21,11 +21,10 @@ class Story < ActiveRecord::Base
 		else
 			result = self.zipcode
 		end
-		address = Geocoder.search(result)
+		address = Geocoder.search("result")
 		self.latitude = address.first.data["latitude"]
 		self.longitude = address.first.data["longitude"]
 		self.town = address.first.data["city"]
-		self.zipcode = address.first.data["postal_code"]
 		self.region = address.first.data["region_code"]
 		self.country = address.first.data["country_code"]
 	end
