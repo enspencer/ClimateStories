@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-describe Story do |variable|
-	subject do
-		Story.create(name: "", body: "")
-	end
+describe Story do
 
-	it "should have many comments" do
-		comment = Comment.create(name: "", body: "", story_id: subject.id)
-		# subject.comments << comment
-	end
+  before(:each) do
+    @user = User.create(email: 'emma@smelly.com')
+    @comment = Story.create
+  end
 
-end
+  it {should belong_to(:user)}
+  it {should have_many(:comments)}
+
+  end
