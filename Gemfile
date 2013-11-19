@@ -9,6 +9,8 @@ gem 'pg', :group => :production
 # PRY ALL THE TIME! Use pry to not hate yourself
 gem 'pry-rails'
 
+gem 'rspec-rails'
+
 # Testing twilio to receive SMS
 gem 'twilio-ruby'
 
