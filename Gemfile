@@ -10,6 +10,7 @@ gem 'pg', :group => :production
 gem 'pry-rails'
 
 gem 'rspec-rails'
+gem 'factory_girl_rails'
 
 # Testing twilio to receive SMS
 gem 'twilio-ruby'
