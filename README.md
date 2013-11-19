@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/enspencer/rethinking_home.png?branch=master)](https://travis-ci.org/enspencer/rethinking_home)
+
 README
 =====
 
